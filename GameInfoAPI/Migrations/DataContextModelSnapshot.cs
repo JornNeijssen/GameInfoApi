@@ -24,68 +24,68 @@ namespace GameInfoAPI.Migrations
 
             modelBuilder.Entity("GameInfoAPI.Entities.Author", b =>
                 {
-                    b.Property<int>("AuthorId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AuthorId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("AuthorName")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("AuthorId");
+                    b.HasKey("Id");
 
                     b.ToTable("Authors");
                 });
 
             modelBuilder.Entity("GameInfoAPI.Entities.Game", b =>
                 {
-                    b.Property<int>("GameId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GameId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("AuthorId")
                         .HasColumnType("int");
 
-                    b.Property<int>("GameAgeRestriction")
+                    b.Property<int>("BestPlayerId")
                         .HasColumnType("int");
 
-                    b.Property<string>("GameDescription")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("GameTitle")
+                    b.Property<DateTime>("ReleaseDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("GameId");
+                    b.HasKey("Id");
 
                     b.HasIndex("AuthorId");
+
+                    b.HasIndex("BestPlayerId");
 
                     b.ToTable("Games");
                 });
 
             modelBuilder.Entity("GameInfoAPI.Entities.Player", b =>
                 {
-                    b.Property<int>("PlayerId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PlayerId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("GameId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PlayerName")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("PlayerId");
-
-                    b.HasIndex("GameId");
+                    b.HasKey("Id");
 
                     b.ToTable("Players");
                 });
@@ -93,24 +93,30 @@ namespace GameInfoAPI.Migrations
             modelBuilder.Entity("GameInfoAPI.Entities.Game", b =>
                 {
                     b.HasOne("GameInfoAPI.Entities.Author", "Author")
-                        .WithMany()
+                        .WithMany("Games")
                         .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("GameInfoAPI.Entities.Player", "BestPlayer")
+                        .WithMany("Games")
+                        .HasForeignKey("BestPlayerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Author");
+
+                    b.Navigation("BestPlayer");
+                });
+
+            modelBuilder.Entity("GameInfoAPI.Entities.Author", b =>
+                {
+                    b.Navigation("Games");
                 });
 
             modelBuilder.Entity("GameInfoAPI.Entities.Player", b =>
                 {
-                    b.HasOne("GameInfoAPI.Entities.Game", null)
-                        .WithMany("Players")
-                        .HasForeignKey("GameId");
-                });
-
-            modelBuilder.Entity("GameInfoAPI.Entities.Game", b =>
-                {
-                    b.Navigation("Players");
+                    b.Navigation("Games");
                 });
 #pragma warning restore 612, 618
         }

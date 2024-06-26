@@ -1,117 +1,143 @@
-﻿using GameInfoAPI.Data;
-using GameInfoAPI.Entities;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using GameInfoAPI.DTOs;
+using GameInfoAPI.Entities;
+using GameInfoAPI.Repositories;
 
-namespace GameInfoAPI.Controllers
+[ApiController]
+[Route("api/games")]
+public class GameController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class GameController : ControllerBase
+    private readonly IGameRepository _gameRepository;
+    private readonly IAuthorRepository _authorRepository;
+    private readonly IPlayerRepository _playerRepository;
+
+    public GameController(IGameRepository gameRepository, IAuthorRepository authorRepository, IPlayerRepository playerRepository)
     {
-        private readonly DataContext _context;
-        public GameController(DataContext context)
+        _gameRepository = gameRepository;
+        _authorRepository = authorRepository;
+        _playerRepository = playerRepository;
+    }
+
+    // GET: api/games
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<GameDTO>>> GetGames()
+    {
+        var games = await _gameRepository.GetAllAsync();
+
+        var gameDTOs = games.Select(game => new GameDTO
         {
-            _context = context;
+            Id = game.Id,
+            Title = game.Title,
+            Description = game.Description,
+            ReleaseDate = game.ReleaseDate,
+            Author = new AuthorDTO { Id = game.AuthorId, Name = game.Author.Name }, // Assuming AuthorId and Name for DTO
+            BestPlayer = new PlayerDTO { Id = game.BestPlayerId, Name = game.BestPlayer.Name } // Assuming BestPlayerId and Name for DTO
+        }).ToList();
+
+        return Ok(gameDTOs);
+    }
+
+    // GET: api/games/{id}
+    [HttpGet("{id}")]
+    public async Task<ActionResult<GameDTO>> GetGame(int id)
+    {
+        var game = await _gameRepository.GetByIdAsync(id);
+
+        if (game == null)
+        {
+            return NotFound();
         }
 
-        [HttpGet]
-        public async Task<ActionResult<List<Game>>> GetAllGames()
+        var gameDTO = new GameDTO
         {
-            var games = await _context.Games.Include(g => g.Players).Include(g => g.Author).ToListAsync();
-            return Ok(games);
+            Id = game.Id,
+            Title = game.Title,
+            Description = game.Description,
+            ReleaseDate = game.ReleaseDate,
+            Author = new AuthorDTO { Id = game.AuthorId, Name = game.Author.Name }, // Assuming AuthorId and Name for DTO
+            BestPlayer = new PlayerDTO { Id = game.BestPlayerId, Name = game.BestPlayer.Name } // Assuming BestPlayerId and Name for DTO
+        };
+
+        return gameDTO;
+    }
+
+    // POST: api/games
+    [HttpPost]
+    public async Task<ActionResult<GameDTO>> CreateGame(GameDTO gameDTO)
+    {
+        var author = await _authorRepository.GetOrCreateAsync(gameDTO.Author.Id, gameDTO.Author.Name);
+        var bestPlayer = await _playerRepository.GetOrCreateAsync(gameDTO.BestPlayer.Id, gameDTO.BestPlayer.Name);
+
+        var game = new Game
+        {
+            Title = gameDTO.Title,
+            Description = gameDTO.Description,
+            ReleaseDate = gameDTO.ReleaseDate,
+            AuthorId = author.Id,
+            BestPlayerId = bestPlayer.Id
+        };
+
+        await _gameRepository.CreateAsync(game);
+
+        var createdGameDTO = new GameDTO
+        {
+            Id = game.Id,
+            Title = game.Title,
+            Description = game.Description,
+            ReleaseDate = game.ReleaseDate,
+            Author = new AuthorDTO { Id = author.Id, Name = author.Name },
+            BestPlayer = new PlayerDTO { Id = bestPlayer.Id, Name = bestPlayer.Name }
+        };
+
+        return CreatedAtAction(nameof(GetGame), new { id = createdGameDTO.Id }, createdGameDTO);
+    }
+
+    // PUT: api/games/{id}
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateGame(int id, GameDTO gameDTO)
+    {
+        if (id != gameDTO.Id)
+        {
+            return BadRequest();
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Game>> GetGame(int id)
-        {
-            var game = await _context.Games.Include(g => g.Players).Include(g => g.Author).FirstOrDefaultAsync(g => g.GameId == id);
-            if (game == null)
-            {
-                return NotFound("Game Not Found.");
-            }
+        var existingGame = await _gameRepository.GetByIdAsync(id);
 
-            return Ok(game);
+        if (existingGame == null)
+        {
+            return NotFound();
         }
 
-        [HttpPost]
-        public async Task<ActionResult<Game>> AddGame(Game game)
+        var author = await _authorRepository.GetOrCreateAsync(gameDTO.Author.Id, gameDTO.Author.Name);
+        var bestPlayer = await _playerRepository.GetOrCreateAsync(gameDTO.BestPlayer.Id, gameDTO.BestPlayer.Name);
+
+        existingGame.Title = gameDTO.Title;
+        existingGame.Description = gameDTO.Description;
+        existingGame.ReleaseDate = gameDTO.ReleaseDate;
+        existingGame.AuthorId = author.Id;
+        existingGame.BestPlayerId = bestPlayer.Id;
+
+        await _gameRepository.UpdateAsync(existingGame);
+
+        return NoContent();
+    }
+
+    // DELETE: api/games/{id}
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteGame(int id)
+    {
+        var game = await _gameRepository.GetByIdAsync(id);
+
+        if (game == null)
         {
-            var author = await _context.Authors.FindAsync(game.Author.AuthorId);
-            if (author == null)
-            {
-                return BadRequest("Invalid AuthorId.");
-            }
-            game.Author = author;
-
-            var players = new List<Player>();
-            foreach (var player in game.Players)
-            {
-                var dbPlayer = await _context.Players.FindAsync(player.PlayerId);
-                if (dbPlayer == null)
-                {
-                    return BadRequest($"Invalid PlayerId: {player.PlayerId}");
-                }
-                players.Add(dbPlayer);
-            }
-            game.Players = players;
-
-            _context.Games.Add(game);
-            await _context.SaveChangesAsync();
-            return Ok(game);
+            return NotFound();
         }
 
-        [HttpPut("{id}")]
-        public async Task<ActionResult<Game>> UpdateGame(int id, Game updatedGame)
-        {
-            var dbGame = await _context.Games.Include(g => g.Players).Include(g => g.Author).FirstOrDefaultAsync(g => g.GameId == id);
-            if (dbGame == null)
-            {
-                return NotFound("Game Not Found.");
-            }
+        await _gameRepository.DeleteAsync(game);
 
-            dbGame.GameTitle = updatedGame.GameTitle;
-            dbGame.GameAgeRestriction = updatedGame.GameAgeRestriction;
-            dbGame.GameDescription = updatedGame.GameDescription;
-
-            dbGame.Author = await _context.Authors.FindAsync(updatedGame.Author.AuthorId);
-            if (dbGame.Author == null)
-            {
-                return BadRequest("Invalid AuthorId.");
-            }
-
-            var players = new List<Player>();
-            foreach (var player in updatedGame.Players)
-            {
-                var dbPlayer = await _context.Players.FindAsync(player.PlayerId);
-                if (dbPlayer == null)
-                {
-                    return BadRequest($"Invalid PlayerId: {player.PlayerId}");
-                }
-                players.Add(dbPlayer);
-            }
-
-            dbGame.Players = players;
-
-            await _context.SaveChangesAsync();
-            return Ok(dbGame);
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteGame(int id)
-        {
-            var dbGame = await _context.Games.FindAsync(id);
-            if (dbGame == null)
-            {
-                return NotFound("Game Not Found.");
-            }
-
-            _context.Games.Remove(dbGame);
-            await _context.SaveChangesAsync();
-            return Ok();
-        }
+        return NoContent();
     }
 }
