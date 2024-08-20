@@ -30,7 +30,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t myapp:latest .
+        docker build -t jornneijssen/gameinfoapiimage:latest .
 
     - name: Log in to Docker Hub
       env:
@@ -41,5 +41,5 @@ jobs:
 
     - name: Push Docker image to Docker Hub
       run: |
-        docker tag myapp:latest mydockerhubusername/myapp:latest
-        docker push mydockerhubusername/myapp:latest
+        docker tag jornneijssen/gameinfoapiimage:latest jornneijssen/gameinfoapiimage:latest
+        docker push jornneijssen/gameinfoapiimage:latest
