@@ -24,7 +24,5 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          # Bouw de Docker image
           docker build -t jornneijssen/gameinfoapiimage:latest .
-          # Push de Docker image naar Docker Hub
           docker push jornneijssen/gameinfoapiimage:latest
