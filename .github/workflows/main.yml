@@ -1,45 +1,30 @@
-name: .NET and Docker
+name: Build and Push Docker Image
 
 on:
   push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: 8.0.x
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
 
-    - name: Restore dependencies
-      run: dotnet restore
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
-    - name: Build
-      run: dotnet build --no-restore
-
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
-
-    - name: Build Docker image
-      run: |
-        docker build -t jornneijssen/gameinfoapiimage:latest .
-
-    - name: Log in to Docker Hub
-      env:
-        DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
-        DOCKER_HUB_ACCESS_TOKEN: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-      run: |
-        echo $DOCKER_HUB_ACCESS_TOKEN | docker login -u $DOCKER_HUB_USERNAME --password-stdin
-
-    - name: Push Docker image to Docker Hub
-      run: |
-        docker tag jornneijssen/gameinfoapiimage:latest jornneijssen/gameinfoapiimage:latest
-        docker push jornneijssen/gameinfoapiimage:latest
+      - name: Build and push Docker image
+        run: |
+          # Bouw de Docker image
+          docker build -t jornneijssen/gameinfoapiimage:latest .
+          # Push de Docker image naar Docker Hub
+          docker push jornneijssen/gameinfoapiimage:latest
