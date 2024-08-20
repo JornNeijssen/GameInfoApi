@@ -17,7 +17,6 @@ public class PlayerController : ControllerBase
         _playerRepository = playerRepository;
     }
 
-    // GET: api/players
     [HttpGet]
     public async Task<ActionResult<IEnumerable<PlayerDTO>>> GetPlayers()
     {
@@ -27,13 +26,11 @@ public class PlayerController : ControllerBase
         {
             Id = player.Id,
             Name = player.Name
-            // Add other properties as needed
         }).ToList();
 
         return Ok(playerDTOs);
     }
 
-    // GET: api/players/{id}
     [HttpGet("{id}")]
     public async Task<ActionResult<PlayerDTO>> GetPlayer(int id)
     {
@@ -48,20 +45,17 @@ public class PlayerController : ControllerBase
         {
             Id = player.Id,
             Name = player.Name
-            // Add other properties as needed
         };
 
         return playerDTO;
     }
 
-    // POST: api/players
     [HttpPost]
     public async Task<ActionResult<PlayerDTO>> CreatePlayer(PlayerDTO playerDTO)
     {
         var player = new Player
         {
             Name = playerDTO.Name
-            // Set other properties as needed
         };
 
         await _playerRepository.CreateAsync(player);
@@ -70,13 +64,11 @@ public class PlayerController : ControllerBase
         {
             Id = player.Id,
             Name = player.Name
-            // Add other properties as needed
         };
 
         return CreatedAtAction(nameof(GetPlayer), new { id = createdPlayerDTO.Id }, createdPlayerDTO);
     }
 
-    // PUT: api/players/{id}
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdatePlayer(int id, PlayerDTO playerDTO)
     {
@@ -93,14 +85,12 @@ public class PlayerController : ControllerBase
         }
 
         existingPlayer.Name = playerDTO.Name;
-        // Update other properties as needed
 
         await _playerRepository.UpdateAsync(existingPlayer);
 
         return NoContent();
     }
 
-    // DELETE: api/players/{id}
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeletePlayer(int id)
     {

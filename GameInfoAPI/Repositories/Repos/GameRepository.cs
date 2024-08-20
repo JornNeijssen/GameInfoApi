@@ -1,6 +1,7 @@
 ﻿using GameInfoAPI.Data;
 using GameInfoAPI.Entities;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace GameInfoAPI.Repositories
@@ -16,12 +17,18 @@ namespace GameInfoAPI.Repositories
 
         public async Task<Game> GetByIdAsync(int id)
         {
-            return await _context.Games.FindAsync(id);
+            return await _context.Games
+                .Include(g => g.Author)
+                .Include(g => g.BestPlayer)
+                .FirstOrDefaultAsync(g => g.Id == id);
         }
 
         public async Task<List<Game>> GetAllAsync()
         {
-            return await _context.Games.ToListAsync();
+            return await _context.Games
+                .Include(g => g.Author)
+                .Include(g => g.BestPlayer)
+                .ToListAsync();
         }
 
         public async Task CreateAsync(Game game)
@@ -42,7 +49,7 @@ namespace GameInfoAPI.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Game> GetOrCreateAsync(int id, string name)
+        public async Task<Game> GetOrCreateAsync(int id, string title)
         {
             var existingGame = await _context.Games.FindAsync(id);
 
@@ -52,7 +59,7 @@ namespace GameInfoAPI.Repositories
             }
             else
             {
-                var newGame = new Game { Id = id, Title = name };
+                var newGame = new Game { Id = id, Title = title };
                 _context.Games.Add(newGame);
                 await _context.SaveChangesAsync();
                 return newGame;

@@ -1,9 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using GameInfoAPI.DTOs;
+using GameInfoAPI.Entities;
 using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using Xunit;
 
@@ -19,31 +22,50 @@ namespace GameInfoAPI.Tests.Integration
         }
 
         [Fact]
-        public async Task GetGames_ReturnsSuccessStatusCode()
+        public async Task CreateGame_AddsNewGame()
         {
-            // Arrange
             var client = _factory.CreateClient();
 
-            // Act
-            var response = await client.GetAsync("/api/games");
 
-            // Assert
-            response.EnsureSuccessStatusCode(); // Status Code 200-299
-        }
+            var newGame = new GameDTO
+            {
+                Title = "New Game",
+                Description = "New Description",
+                ReleaseDate = DateTime.Now,
+                AuthorId = 3,
+                BestPlayerId = 3,
+                Author = new AuthorDTO
+                {
+                    Id = 3, 
+                    Name = ""
+                },
+                BestPlayer = new PlayerDTO
+                {
+                    Id = 3, 
+                    Name = ""
+                }
+            };
 
-        [Fact]
-        public async Task GetGames_ReturnsListOfGames()
-        {
-            // Arrange
-            var client = _factory.CreateClient();
+            var content = new StringContent(JsonConvert.SerializeObject(newGame), Encoding.UTF8, "application/json");
 
-            // Act
-            var response = await client.GetAsync("/api/games");
-            var content = await response.Content.ReadAsStringAsync();
-            var games = JsonConvert.DeserializeObject<List<GameDTO>>(content);
+            var response = await client.PostAsync("/api/games", content);
 
-            // Assert
-            Assert.NotNull(games);
+            var responseContent = await response.Content.ReadAsStringAsync();
+            Console.WriteLine($"Status Code: {response.StatusCode}");
+            Console.WriteLine($"Response Content: {responseContent}");
+
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception($"Failed to create game. Status code: {response.StatusCode}. Response content: {responseContent}");
+            }
+
+            var createdGame = JsonConvert.DeserializeObject<GameDTO>(responseContent);
+            Assert.NotNull(createdGame);
+            Assert.Equal("New Game", createdGame.Title);
+            Assert.Equal("New Description", createdGame.Description);
+            Assert.NotEqual(0, createdGame.Id); 
+            Assert.Equal(3, createdGame.Author.Id);
+            Assert.Equal(3, createdGame.BestPlayer.Id);
         }
     }
 }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GameInfoAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240626133948_ResetOfDatabase")]
-    partial class ResetOfDatabase
+    [Migration("20240819150933_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

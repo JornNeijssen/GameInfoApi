@@ -1,10 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using GameInfoAPI.DTOs;
+﻿using GameInfoAPI.DTOs;
 using GameInfoAPI.Entities;
 using GameInfoAPI.Repositories;
+using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
 [Route("api/games")]
@@ -21,26 +18,33 @@ public class GameController : ControllerBase
         _playerRepository = playerRepository;
     }
 
-    // GET: api/games
     [HttpGet]
     public async Task<ActionResult<IEnumerable<GameDTO>>> GetGames()
     {
         var games = await _gameRepository.GetAllAsync();
+        var gameDTOs = new List<GameDTO>();
 
-        var gameDTOs = games.Select(game => new GameDTO
+        foreach (var game in games)
         {
-            Id = game.Id,
-            Title = game.Title,
-            Description = game.Description,
-            ReleaseDate = game.ReleaseDate,
-            Author = new AuthorDTO { Id = game.AuthorId, Name = game.Author.Name }, // Assuming AuthorId and Name for DTO
-            BestPlayer = new PlayerDTO { Id = game.BestPlayerId, Name = game.BestPlayer.Name } // Assuming BestPlayerId and Name for DTO
-        }).ToList();
+            var author = await _authorRepository.GetByIdAsync(game.AuthorId);
+            var bestPlayer = await _playerRepository.GetByIdAsync(game.BestPlayerId);
+
+            gameDTOs.Add(new GameDTO
+            {
+                Id = game.Id,
+                Title = game.Title,
+                Description = game.Description,
+                ReleaseDate = game.ReleaseDate,
+                AuthorId = game.AuthorId,
+                BestPlayerId = game.BestPlayerId,
+                Author = author == null ? null : new AuthorDTO { Id = author.Id, Name = author.Name },
+                BestPlayer = bestPlayer == null ? null : new PlayerDTO { Id = bestPlayer.Id, Name = bestPlayer.Name }
+            });
+        }
 
         return Ok(gameDTOs);
     }
 
-    // GET: api/games/{id}
     [HttpGet("{id}")]
     public async Task<ActionResult<GameDTO>> GetGame(int id)
     {
@@ -51,25 +55,34 @@ public class GameController : ControllerBase
             return NotFound();
         }
 
+        var author = await _authorRepository.GetByIdAsync(game.AuthorId);
+        var bestPlayer = await _playerRepository.GetByIdAsync(game.BestPlayerId);
+
         var gameDTO = new GameDTO
         {
             Id = game.Id,
             Title = game.Title,
             Description = game.Description,
             ReleaseDate = game.ReleaseDate,
-            Author = new AuthorDTO { Id = game.AuthorId, Name = game.Author.Name }, // Assuming AuthorId and Name for DTO
-            BestPlayer = new PlayerDTO { Id = game.BestPlayerId, Name = game.BestPlayer.Name } // Assuming BestPlayerId and Name for DTO
+            AuthorId = game.AuthorId,
+            BestPlayerId = game.BestPlayerId,
+            Author = author == null ? null : new AuthorDTO { Id = author.Id, Name = author.Name },
+            BestPlayer = bestPlayer == null ? null : new PlayerDTO { Id = bestPlayer.Id, Name = bestPlayer.Name }
         };
 
         return gameDTO;
     }
 
-    // POST: api/games
     [HttpPost]
     public async Task<ActionResult<GameDTO>> CreateGame(GameDTO gameDTO)
     {
-        var author = await _authorRepository.GetOrCreateAsync(gameDTO.Author.Id, gameDTO.Author.Name);
-        var bestPlayer = await _playerRepository.GetOrCreateAsync(gameDTO.BestPlayer.Id, gameDTO.BestPlayer.Name);
+        var author = await _authorRepository.GetByIdAsync(gameDTO.AuthorId);
+        var bestPlayer = await _playerRepository.GetByIdAsync(gameDTO.BestPlayerId);
+
+        if (author == null || bestPlayer == null)
+        {
+            return BadRequest("Author or BestPlayer does not exist.");
+        }
 
         var game = new Game
         {
@@ -88,6 +101,8 @@ public class GameController : ControllerBase
             Title = game.Title,
             Description = game.Description,
             ReleaseDate = game.ReleaseDate,
+            AuthorId = game.AuthorId,
+            BestPlayerId = game.BestPlayerId,
             Author = new AuthorDTO { Id = author.Id, Name = author.Name },
             BestPlayer = new PlayerDTO { Id = bestPlayer.Id, Name = bestPlayer.Name }
         };
@@ -95,7 +110,6 @@ public class GameController : ControllerBase
         return CreatedAtAction(nameof(GetGame), new { id = createdGameDTO.Id }, createdGameDTO);
     }
 
-    // PUT: api/games/{id}
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateGame(int id, GameDTO gameDTO)
     {
@@ -111,8 +125,13 @@ public class GameController : ControllerBase
             return NotFound();
         }
 
-        var author = await _authorRepository.GetOrCreateAsync(gameDTO.Author.Id, gameDTO.Author.Name);
-        var bestPlayer = await _playerRepository.GetOrCreateAsync(gameDTO.BestPlayer.Id, gameDTO.BestPlayer.Name);
+        var author = await _authorRepository.GetByIdAsync(gameDTO.AuthorId);
+        var bestPlayer = await _playerRepository.GetByIdAsync(gameDTO.BestPlayerId);
+
+        if (author == null || bestPlayer == null)
+        {
+            return BadRequest("Author or BestPlayer does not exist.");
+        }
 
         existingGame.Title = gameDTO.Title;
         existingGame.Description = gameDTO.Description;
@@ -125,7 +144,6 @@ public class GameController : ControllerBase
         return NoContent();
     }
 
-    // DELETE: api/games/{id}
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteGame(int id)
     {

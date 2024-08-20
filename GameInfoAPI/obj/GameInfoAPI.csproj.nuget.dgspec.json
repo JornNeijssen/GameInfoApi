@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\GameInfoAPI.csproj": {}
+    "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI\\GameInfoAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\GameInfoAPI.csproj": {
+    "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI\\GameInfoAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\GameInfoAPI.csproj",
+        "projectUniqueName": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI\\GameInfoAPI.csproj",
         "projectName": "GameInfoAPI",
-        "projectPath": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\GameInfoAPI.csproj",
+        "projectPath": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI\\GameInfoAPI.csproj",
         "packagesPath": "C:\\Users\\jornn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\obj\\",
+        "outputPath": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

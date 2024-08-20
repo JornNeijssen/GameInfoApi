@@ -1,6 +1,7 @@
 ﻿using GameInfoAPI.Data;
 using GameInfoAPI.Entities;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace GameInfoAPI.Repositories

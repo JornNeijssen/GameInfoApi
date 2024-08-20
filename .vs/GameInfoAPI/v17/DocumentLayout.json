@@ -1,94 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\",
+  "WorkspaceRootPath": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7FDB60DF-8F8B-4D31-843A-8CDE9F89A74E}|GameInfoAPI.Tests\\GameInfoAPI.Tests.csproj|c:\\users\\jornn\\source\\repos\\gameinfoapi\\gameinfoapi.tests\\gamecontrollerintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FDB60DF-8F8B-4D31-843A-8CDE9F89A74E}|GameInfoAPI.Tests\\GameInfoAPI.Tests.csproj|solutionrelative:gameinfoapi.tests\\gamecontrollerintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|c:\\users\\jornn\\desktop\\cloudnativekans3jornneijssen\\gameinfoapi\\gameinfoapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|solutionrelative:gameinfoapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FDB60DF-8F8B-4D31-843A-8CDE9F89A74E}|GameInfoAPI.Tests\\GameInfoAPI.Tests.csproj|c:\\users\\jornn\\source\\repos\\gameinfoapi\\gameinfoapi.tests\\playerrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7FDB60DF-8F8B-4D31-843A-8CDE9F89A74E}|GameInfoAPI.Tests\\GameInfoAPI.Tests.csproj|c:\\users\\jornn\\desktop\\cloudnativekans3jornneijssen\\gameinfoapi\\gameinfoapi.tests\\playerrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FDB60DF-8F8B-4D31-843A-8CDE9F89A74E}|GameInfoAPI.Tests\\GameInfoAPI.Tests.csproj|solutionrelative:gameinfoapi.tests\\playerrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|c:\\users\\jornn\\source\\repos\\gameinfoapi\\gameinfoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7FDB60DF-8F8B-4D31-843A-8CDE9F89A74E}|GameInfoAPI.Tests\\GameInfoAPI.Tests.csproj|c:\\users\\jornn\\desktop\\cloudnativekans3jornneijssen\\gameinfoapi\\gameinfoapi.tests\\playercontrollerintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FDB60DF-8F8B-4D31-843A-8CDE9F89A74E}|GameInfoAPI.Tests\\GameInfoAPI.Tests.csproj|solutionrelative:gameinfoapi.tests\\playercontrollerintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FDB60DF-8F8B-4D31-843A-8CDE9F89A74E}|GameInfoAPI.Tests\\GameInfoAPI.Tests.csproj|c:\\users\\jornn\\desktop\\cloudnativekans3jornneijssen\\gameinfoapi\\gameinfoapi.tests\\gamerepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FDB60DF-8F8B-4D31-843A-8CDE9F89A74E}|GameInfoAPI.Tests\\GameInfoAPI.Tests.csproj|solutionrelative:gameinfoapi.tests\\gamerepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FDB60DF-8F8B-4D31-843A-8CDE9F89A74E}|GameInfoAPI.Tests\\GameInfoAPI.Tests.csproj|c:\\users\\jornn\\desktop\\cloudnativekans3jornneijssen\\gameinfoapi\\gameinfoapi.tests\\gamecontrollerintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FDB60DF-8F8B-4D31-843A-8CDE9F89A74E}|GameInfoAPI.Tests\\GameInfoAPI.Tests.csproj|solutionrelative:gameinfoapi.tests\\gamecontrollerintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FDB60DF-8F8B-4D31-843A-8CDE9F89A74E}|GameInfoAPI.Tests\\GameInfoAPI.Tests.csproj|c:\\users\\jornn\\desktop\\cloudnativekans3jornneijssen\\gameinfoapi\\gameinfoapi.tests\\authorrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FDB60DF-8F8B-4D31-843A-8CDE9F89A74E}|GameInfoAPI.Tests\\GameInfoAPI.Tests.csproj|solutionrelative:gameinfoapi.tests\\authorrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FDB60DF-8F8B-4D31-843A-8CDE9F89A74E}|GameInfoAPI.Tests\\GameInfoAPI.Tests.csproj|c:\\users\\jornn\\desktop\\cloudnativekans3jornneijssen\\gameinfoapi\\gameinfoapi.tests\\authorcontrollerintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FDB60DF-8F8B-4D31-843A-8CDE9F89A74E}|GameInfoAPI.Tests\\GameInfoAPI.Tests.csproj|solutionrelative:gameinfoapi.tests\\authorcontrollerintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|c:\\users\\jornn\\desktop\\cloudnativekans3jornneijssen\\gameinfoapi\\gameinfoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|solutionrelative:gameinfoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|c:\\users\\jornn\\source\\repos\\gameinfoapi\\gameinfoapi\\controllers\\authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|solutionrelative:gameinfoapi\\controllers\\authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|c:\\users\\jornn\\source\\repos\\gameinfoapi\\gameinfoapi\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|c:\\users\\jornn\\desktop\\cloudnativekans3jornneijssen\\gameinfoapi\\gameinfoapi\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|solutionrelative:gameinfoapi\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|c:\\users\\jornn\\source\\repos\\gameinfoapi\\gameinfoapi\\controllers\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|solutionrelative:gameinfoapi\\controllers\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|c:\\users\\jornn\\source\\repos\\gameinfoapi\\gameinfoapi\\dtos\\authordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|solutionrelative:gameinfoapi\\dtos\\authordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|c:\\users\\jornn\\source\\repos\\gameinfoapi\\gameinfoapi\\dtos\\gamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|solutionrelative:gameinfoapi\\dtos\\gamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|c:\\users\\jornn\\source\\repos\\gameinfoapi\\gameinfoapi\\dtos\\playerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|solutionrelative:gameinfoapi\\dtos\\playerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|c:\\users\\jornn\\source\\repos\\gameinfoapi\\gameinfoapi\\entities\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|solutionrelative:gameinfoapi\\entities\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|c:\\users\\jornn\\source\\repos\\gameinfoapi\\gameinfoapi\\entities\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|solutionrelative:gameinfoapi\\entities\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|c:\\users\\jornn\\source\\repos\\gameinfoapi\\gameinfoapi\\entities\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|solutionrelative:gameinfoapi\\entities\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|c:\\users\\jornn\\source\\repos\\gameinfoapi\\gameinfoapi\\repositories\\interfaces\\iauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|solutionrelative:gameinfoapi\\repositories\\interfaces\\iauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|c:\\users\\jornn\\source\\repos\\gameinfoapi\\gameinfoapi\\repositories\\interfaces\\igamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|solutionrelative:gameinfoapi\\repositories\\interfaces\\igamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|c:\\users\\jornn\\source\\repos\\gameinfoapi\\gameinfoapi\\repositories\\interfaces\\iplayerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|solutionrelative:gameinfoapi\\repositories\\interfaces\\iplayerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|c:\\users\\jornn\\source\\repos\\gameinfoapi\\gameinfoapi\\repositories\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|solutionrelative:gameinfoapi\\repositories\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|c:\\users\\jornn\\source\\repos\\gameinfoapi\\gameinfoapi\\repositories\\repos\\authorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|solutionrelative:gameinfoapi\\repositories\\repos\\authorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|c:\\users\\jornn\\source\\repos\\gameinfoapi\\gameinfoapi\\repositories\\repos\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|solutionrelative:gameinfoapi\\repositories\\repos\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|c:\\users\\jornn\\source\\repos\\gameinfoapi\\gameinfoapi\\repositories\\repos\\playerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|solutionrelative:gameinfoapi\\repositories\\repos\\playerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Migrations\\20240626133948_ResetOfDatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GameInfoAPI\\Migrations\\20240626133948_ResetOfDatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Migrations\\20240626121255_NewResetInitial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GameInfoAPI\\Migrations\\20240626121255_NewResetInitial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Migrations\\20240626111513_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GameInfoAPI\\Migrations\\20240626111513_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|c:\\users\\jornn\\desktop\\cloudnativekans3jornneijssen\\gameinfoapi\\gameinfoapi\\migrations\\20240819194836_secondupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{794DC9DB-AAD1-4051-8FAA-F64CA741A1E1}|GameInfoAPI\\GameInfoAPI.csproj|solutionrelative:gameinfoapi\\migrations\\20240819194836_secondupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -103,288 +55,131 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI\\Dockerfile",
+              "RelativeDocumentMoniker": "GameInfoAPI\\Dockerfile",
+              "ToolTip": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI\\Dockerfile",
+              "RelativeToolTip": "GameInfoAPI\\Dockerfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-20T07:27:17.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "GameControllerIntegrationTests.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI.Tests\\GameControllerIntegrationTests.cs",
+              "DocumentMoniker": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI.Tests\\GameControllerIntegrationTests.cs",
               "RelativeDocumentMoniker": "GameInfoAPI.Tests\\GameControllerIntegrationTests.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI.Tests\\GameControllerIntegrationTests.cs",
+              "ToolTip": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI.Tests\\GameControllerIntegrationTests.cs",
               "RelativeToolTip": "GameInfoAPI.Tests\\GameControllerIntegrationTests.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAYwC0AAAAiAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T14:09:39.715Z",
+              "WhenOpened": "2024-08-19T20:26:27.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameRepositoryTests.cs",
+              "DocumentMoniker": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI.Tests\\GameRepositoryTests.cs",
+              "RelativeDocumentMoniker": "GameInfoAPI.Tests\\GameRepositoryTests.cs",
+              "ToolTip": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI.Tests\\GameRepositoryTests.cs",
+              "RelativeToolTip": "GameInfoAPI.Tests\\GameRepositoryTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T19:39:10.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerControllerIntegrationTests.cs",
+              "DocumentMoniker": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI.Tests\\PlayerControllerIntegrationTests.cs",
+              "RelativeDocumentMoniker": "GameInfoAPI.Tests\\PlayerControllerIntegrationTests.cs",
+              "ToolTip": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI.Tests\\PlayerControllerIntegrationTests.cs",
+              "RelativeToolTip": "GameInfoAPI.Tests\\PlayerControllerIntegrationTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T20:09:18.318Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "PlayerRepositoryTests.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI.Tests\\PlayerRepositoryTests.cs",
+              "DocumentMoniker": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI.Tests\\PlayerRepositoryTests.cs",
               "RelativeDocumentMoniker": "GameInfoAPI.Tests\\PlayerRepositoryTests.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI.Tests\\PlayerRepositoryTests.cs",
+              "ToolTip": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI.Tests\\PlayerRepositoryTests.cs",
               "RelativeToolTip": "GameInfoAPI.Tests\\PlayerRepositoryTests.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABsAAAAhAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T14:08:49.999Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AuthorDTO.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\DTOs\\AuthorDTO.cs",
-              "RelativeDocumentMoniker": "GameInfoAPI\\DTOs\\AuthorDTO.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\DTOs\\AuthorDTO.cs",
-              "RelativeToolTip": "GameInfoAPI\\DTOs\\AuthorDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T10:09:49.752Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Program.cs",
-              "RelativeDocumentMoniker": "GameInfoAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Program.cs",
-              "RelativeToolTip": "GameInfoAPI\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T10:22:10.562Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GameDTO.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\DTOs\\GameDTO.cs",
-              "RelativeDocumentMoniker": "GameInfoAPI\\DTOs\\GameDTO.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\DTOs\\GameDTO.cs",
-              "RelativeToolTip": "GameInfoAPI\\DTOs\\GameDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T10:09:38.212Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PlayerDTO.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\DTOs\\PlayerDTO.cs",
-              "RelativeDocumentMoniker": "GameInfoAPI\\DTOs\\PlayerDTO.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\DTOs\\PlayerDTO.cs",
-              "RelativeToolTip": "GameInfoAPI\\DTOs\\PlayerDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T10:10:01.547Z",
+              "WhenOpened": "2024-08-19T19:42:50.507Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Controllers\\PlayerController.cs",
-              "RelativeDocumentMoniker": "GameInfoAPI\\Controllers\\PlayerController.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Controllers\\PlayerController.cs",
-              "RelativeToolTip": "GameInfoAPI\\Controllers\\PlayerController.cs",
+              "Title": "AuthorRepositoryTests.cs",
+              "DocumentMoniker": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI.Tests\\AuthorRepositoryTests.cs",
+              "RelativeDocumentMoniker": "GameInfoAPI.Tests\\AuthorRepositoryTests.cs",
+              "ToolTip": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI.Tests\\AuthorRepositoryTests.cs",
+              "RelativeToolTip": "GameInfoAPI.Tests\\AuthorRepositoryTests.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T09:58:31.983Z",
+              "WhenOpened": "2024-08-19T19:34:52.908Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
+              "Title": "AuthorControllerIntegrationTests.cs",
+              "DocumentMoniker": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI.Tests\\AuthorControllerIntegrationTests.cs",
+              "RelativeDocumentMoniker": "GameInfoAPI.Tests\\AuthorControllerIntegrationTests.cs",
+              "ToolTip": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI.Tests\\AuthorControllerIntegrationTests.cs",
+              "RelativeToolTip": "GameInfoAPI.Tests\\AuthorControllerIntegrationTests.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAYwCMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T20:25:58.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI\\Program.cs",
+              "RelativeDocumentMoniker": "GameInfoAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI\\Program.cs",
+              "RelativeToolTip": "GameInfoAPI\\Program.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAQwDAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T07:13:53.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "GameController.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Controllers\\GameController.cs",
+              "DocumentMoniker": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI\\Controllers\\GameController.cs",
               "RelativeDocumentMoniker": "GameInfoAPI\\Controllers\\GameController.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Controllers\\GameController.cs",
+              "ToolTip": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI\\Controllers\\GameController.cs",
               "RelativeToolTip": "GameInfoAPI\\Controllers\\GameController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAIoAAAAAAAAAAAAowKAAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T09:57:50.194Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthorController.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Controllers\\AuthorController.cs",
-              "RelativeDocumentMoniker": "GameInfoAPI\\Controllers\\AuthorController.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Controllers\\AuthorController.cs",
-              "RelativeToolTip": "GameInfoAPI\\Controllers\\AuthorController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T09:58:56.878Z",
+              "WhenOpened": "2024-08-20T07:05:08.381Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "Author.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Entities\\Author.cs",
-              "RelativeDocumentMoniker": "GameInfoAPI\\Entities\\Author.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Entities\\Author.cs",
-              "RelativeToolTip": "GameInfoAPI\\Entities\\Author.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "Title": "20240819194836_secondupdate.cs",
+              "DocumentMoniker": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI\\Migrations\\20240819194836_secondupdate.cs",
+              "RelativeDocumentMoniker": "GameInfoAPI\\Migrations\\20240819194836_secondupdate.cs",
+              "ToolTip": "C:\\Users\\jornn\\Desktop\\CloudNativeKans3JornNeijssen\\GameInfoAPI\\GameInfoAPI\\Migrations\\20240819194836_secondupdate.cs",
+              "RelativeToolTip": "GameInfoAPI\\Migrations\\20240819194836_secondupdate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T09:57:43.351Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Game.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Entities\\Game.cs",
-              "RelativeDocumentMoniker": "GameInfoAPI\\Entities\\Game.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Entities\\Game.cs",
-              "RelativeToolTip": "GameInfoAPI\\Entities\\Game.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T09:57:45.965Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Entities\\Player.cs",
-              "RelativeDocumentMoniker": "GameInfoAPI\\Entities\\Player.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Entities\\Player.cs",
-              "RelativeToolTip": "GameInfoAPI\\Entities\\Player.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T09:57:47.307Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IAuthorRepository.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Repositories\\Interfaces\\IAuthorRepository.cs",
-              "RelativeDocumentMoniker": "GameInfoAPI\\Repositories\\Interfaces\\IAuthorRepository.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Repositories\\Interfaces\\IAuthorRepository.cs",
-              "RelativeToolTip": "GameInfoAPI\\Repositories\\Interfaces\\IAuthorRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T10:19:27.974Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IGameRepository.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Repositories\\Interfaces\\IGameRepository.cs",
-              "RelativeDocumentMoniker": "GameInfoAPI\\Repositories\\Interfaces\\IGameRepository.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Repositories\\Interfaces\\IGameRepository.cs",
-              "RelativeToolTip": "GameInfoAPI\\Repositories\\Interfaces\\IGameRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T10:19:39.94Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IPlayerRepository.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Repositories\\Interfaces\\IPlayerRepository.cs",
-              "RelativeDocumentMoniker": "GameInfoAPI\\Repositories\\Interfaces\\IPlayerRepository.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Repositories\\Interfaces\\IPlayerRepository.cs",
-              "RelativeToolTip": "GameInfoAPI\\Repositories\\Interfaces\\IPlayerRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T10:19:13.664Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Repositories\\Interfaces\\IRepository.cs",
-              "RelativeDocumentMoniker": "GameInfoAPI\\Repositories\\Interfaces\\IRepository.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Repositories\\Interfaces\\IRepository.cs",
-              "RelativeToolTip": "GameInfoAPI\\Repositories\\Interfaces\\IRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T11:46:45.889Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AuthorRepository.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Repositories\\Repos\\AuthorRepository.cs",
-              "RelativeDocumentMoniker": "GameInfoAPI\\Repositories\\Repos\\AuthorRepository.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Repositories\\Repos\\AuthorRepository.cs",
-              "RelativeToolTip": "GameInfoAPI\\Repositories\\Repos\\AuthorRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T10:23:28.485Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "GameRepository.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Repositories\\Repos\\GameRepository.cs",
-              "RelativeDocumentMoniker": "GameInfoAPI\\Repositories\\Repos\\GameRepository.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Repositories\\Repos\\GameRepository.cs",
-              "RelativeToolTip": "GameInfoAPI\\Repositories\\Repos\\GameRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T10:23:42.014Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "PlayerRepository.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Repositories\\Repos\\PlayerRepository.cs",
-              "RelativeDocumentMoniker": "GameInfoAPI\\Repositories\\Repos\\PlayerRepository.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Repositories\\Repos\\PlayerRepository.cs",
-              "RelativeToolTip": "GameInfoAPI\\Repositories\\Repos\\PlayerRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T10:23:16.45Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "20240626133948_ResetOfDatabase.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Migrations\\20240626133948_ResetOfDatabase.cs",
-              "RelativeDocumentMoniker": "GameInfoAPI\\Migrations\\20240626133948_ResetOfDatabase.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Migrations\\20240626133948_ResetOfDatabase.cs",
-              "RelativeToolTip": "GameInfoAPI\\Migrations\\20240626133948_ResetOfDatabase.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T13:39:48.584Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "20240626121255_NewResetInitial.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Migrations\\20240626121255_NewResetInitial.cs",
-              "RelativeDocumentMoniker": "GameInfoAPI\\Migrations\\20240626121255_NewResetInitial.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Migrations\\20240626121255_NewResetInitial.cs",
-              "RelativeToolTip": "GameInfoAPI\\Migrations\\20240626121255_NewResetInitial.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T12:12:56.037Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "20240626111513_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Migrations\\20240626111513_InitialCreate.cs",
-              "RelativeDocumentMoniker": "GameInfoAPI\\Migrations\\20240626111513_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\jornn\\source\\repos\\GameInfoAPI\\GameInfoAPI\\Migrations\\20240626111513_InitialCreate.cs",
-              "RelativeToolTip": "GameInfoAPI\\Migrations\\20240626111513_InitialCreate.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T11:15:14.158Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T19:48:36.544Z"
             }
           ]
         }

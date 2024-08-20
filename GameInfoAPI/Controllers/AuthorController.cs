@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using GameInfoAPI.DTOs;
@@ -16,7 +17,6 @@ public class AuthorController : ControllerBase
         _authorRepository = authorRepository;
     }
 
-    // GET: api/authors
     [HttpGet]
     public async Task<ActionResult<IEnumerable<AuthorDTO>>> GetAuthors()
     {
@@ -26,13 +26,11 @@ public class AuthorController : ControllerBase
         {
             Id = author.Id,
             Name = author.Name
-            // Add other properties as needed
         }).ToList();
 
         return Ok(authorDTOs);
     }
 
-    // GET: api/authors/{id}
     [HttpGet("{id}")]
     public async Task<ActionResult<AuthorDTO>> GetAuthor(int id)
     {
@@ -47,20 +45,17 @@ public class AuthorController : ControllerBase
         {
             Id = author.Id,
             Name = author.Name
-            // Add other properties as needed
         };
 
         return authorDTO;
     }
 
-    // POST: api/authors
     [HttpPost]
     public async Task<ActionResult<AuthorDTO>> CreateAuthor(AuthorDTO authorDTO)
     {
         var author = new Author
         {
             Name = authorDTO.Name
-            // Set other properties as needed
         };
 
         await _authorRepository.CreateAsync(author);
@@ -69,13 +64,11 @@ public class AuthorController : ControllerBase
         {
             Id = author.Id,
             Name = author.Name
-            // Add other properties as needed
         };
 
         return CreatedAtAction(nameof(GetAuthor), new { id = createdAuthorDTO.Id }, createdAuthorDTO);
     }
 
-    // PUT: api/authors/{id}
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateAuthor(int id, AuthorDTO authorDTO)
     {
@@ -92,14 +85,12 @@ public class AuthorController : ControllerBase
         }
 
         existingAuthor.Name = authorDTO.Name;
-        // Update other properties as needed
 
         await _authorRepository.UpdateAsync(existingAuthor);
 
         return NoContent();
     }
 
-    // DELETE: api/authors/{id}
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteAuthor(int id)
     {
