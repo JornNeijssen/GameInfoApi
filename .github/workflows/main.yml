@@ -22,7 +22,10 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
-      - name: Build and push Docker image
+      - name: Build Docker image
         run: |
-          docker build -t jornneijssen/gameinfoapiimage:latest .
+          docker build -t jornneijssen/gameinfoapiimage:latest -f GameInfoAPI/Dockerfile GameInfoAPI
+          
+      - name: Push Docker image
+        run: |
           docker push jornneijssen/gameinfoapiimage:latest
