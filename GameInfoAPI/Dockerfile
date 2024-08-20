@@ -1,24 +1,33 @@
-
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER app
-WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
-
+# Use the official .NET SDK image as the build image
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-ARG BUILD_CONFIGURATION=Release
+
+# Set the working directory in the container
 WORKDIR /src
-COPY GameInfoAPI/GameInfoAPI.csproj GameInfoAPI/
-RUN dotnet restore GameInfoAPI/GameInfoAPI.csproj
+
+# Copy the project file and restore the dependencies
+COPY GameInfoAPI.csproj .
+RUN dotnet restore
+
+# Copy the rest of the application code
 COPY . .
-WORKDIR "/src/GameInfoAPI"
-RUN dotnet build "./GameInfoAPI.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./GameInfoAPI.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+# Build the application
+RUN dotnet build -c Release -o /app/build
 
-FROM base AS final
+# Publish the application
+RUN dotnet publish -c Release -o /app/publish
+
+# Use the official .NET runtime image for the final image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+
+# Set the working directory in the container
 WORKDIR /app
-COPY --from=publish /app/publish .
+
+# Copy the published output from the build image
+COPY --from=build /app/publish .
+
+# Expose the port the app runs on
+EXPOSE 80
+
+# Start the application
 ENTRYPOINT ["dotnet", "GameInfoAPI.dll"]
