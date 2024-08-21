@@ -46,12 +46,19 @@ GameInfoApi/
 
 ## Important Files
 GameInfoAPI/GameInfoAPI.csproj: The main project file for the API.
+
 GameInfoAPI/Controllers/: Contains the API controllers that handle HTTP requests.
+
 GameInfoAPI/DTOs/: Data Transfer Objects used for data encapsulation.
+
 GameInfoAPI/Entities/: Defines the data models representing the domain entities.
+
 GameInfoAPI/Repositories/: Implements the Repository pattern for data access.
+
 GameInfoAPI/Dockerfile: A Dockerfile for containerizing the application.
+
 GameInfoAPI.Tests/: Contains unit and integration tests for the API.
+
 .github/workflows/main.yaml: GitHub Actions workflow for continuous dockerhub updates.
 
 ## Getting Started
