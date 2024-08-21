@@ -88,4 +88,4 @@ You can run the API locally using the following command:
 dotnet run
 ```
 
-The API will be accessible at https://localhost:7153 (HTTPS) or http://localhost:5036 (HTTP) if you would like to change this this vcan be done in the properties map launchsettings file.
+The API will be accessible at https://localhost:8081 (HTTPS) or http://localhost:8080 (HTTP) if you would like to change this this vcan be done in the properties map launchsettings file.
