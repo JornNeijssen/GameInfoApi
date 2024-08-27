@@ -2,7 +2,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
 # Set the working directory in the container
-WORKDIR /src
+WORKDIR /GameInfoAPI
 
 # Copy the project file(s) and restore the dependencies
 COPY ["GameInfoAPI/GameInfoAPI.csproj", "GameInfoAPI/"]
